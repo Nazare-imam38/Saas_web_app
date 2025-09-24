@@ -7,9 +7,33 @@
       "config": {
         "distDir": "build"
       }
+    },
+    {
+      "src": "api/*.js",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
+    {
+      "src": "/api/auth/(.*)",
+      "dest": "/api/auth.js"
+    },
+    {
+      "src": "/api/projects/(.*)",
+      "dest": "/api/projects.js"
+    },
+    {
+      "src": "/api/tasks/(.*)",
+      "dest": "/api/tasks.js"
+    },
+    {
+      "src": "/api/users/(.*)",
+      "dest": "/api/users.js"
+    },
+    {
+      "src": "/api/health",
+      "dest": "/api/index.js"
+    },
     {
       "src": "/static/(.*)",
       "dest": "/client/build/static/$1"
@@ -33,5 +57,8 @@
   ],
   "installCommand": "npm install && cd client && npm install",
   "buildCommand": "cd client && npm run build",
-  "outputDirectory": "client/build"
+  "outputDirectory": "client/build",
+  "env": {
+    "NODE_ENV": "production"
+  }
 }
