@@ -191,27 +191,27 @@ const Tasks = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 p-6">
+    <div className="min-h-screen bg-gradient-to-br from-dark-900 via-primary-900 to-dark-900 p-6">
       <div className="max-w-7xl mx-auto space-y-8">
         {/* Header */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center space-y-4 lg:space-y-0">
           <div>
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent">
               Task Management
             </h1>
-            <p className="text-gray-300 mt-2">Organize and track your team's work efficiently</p>
+            <p className="text-dark-300 mt-2">Organize and track your team's work efficiently</p>
           </div>
           <div className="flex space-x-3">
             <button
               onClick={() => setView(view === 'kanban' ? 'list' : 'kanban')}
-              className="px-6 py-3 bg-slate-800 border border-slate-600 text-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 flex items-center space-x-2"
+              className="px-6 py-3 bg-dark-800 border border-dark-600 text-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 flex items-center space-x-2"
             >
               <span>{view === 'kanban' ? '📋' : '📊'}</span>
               <span className="font-medium">{view === 'kanban' ? 'List View' : 'Kanban View'}</span>
             </button>
             <button
               onClick={() => setShowCreateModal(true)}
-              className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 flex items-center space-x-2"
+              className="px-6 py-3 bg-gradient-to-r from-primary-500 to-accent-500 text-white rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 flex items-center space-x-2"
             >
               <span className="text-lg">+</span>
               <span className="font-medium">New Task</span>

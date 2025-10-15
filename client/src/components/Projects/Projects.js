@@ -181,27 +181,27 @@ const Projects = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-teal-900 p-6">
+    <div className="min-h-screen bg-gradient-to-br from-dark-900 via-primary-900 to-dark-900 p-6">
       <div className="max-w-7xl mx-auto space-y-8">
         {/* Header */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center space-y-4 lg:space-y-0">
           <div>
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent">
               Project Portfolio
             </h1>
-            <p className="text-gray-300 mt-2">Manage and track all your projects in one place</p>
+            <p className="text-dark-300 mt-2">Manage and track all your projects in one place</p>
           </div>
           <div className="flex space-x-3">
             <button
               onClick={() => setView(view === 'grid' ? 'list' : 'grid')}
-              className="px-6 py-3 bg-slate-800 border border-slate-600 text-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 flex items-center space-x-2"
+              className="px-6 py-3 bg-dark-800 border border-dark-600 text-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 flex items-center space-x-2"
             >
               <span>{view === 'grid' ? '📋' : '📊'}</span>
               <span className="font-medium">{view === 'grid' ? 'List View' : 'Grid View'}</span>
             </button>
             <button
               onClick={() => setShowCreateModal(true)}
-              className="px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 flex items-center space-x-2"
+              className="px-6 py-3 bg-gradient-to-r from-primary-500 to-accent-500 text-white rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 flex items-center space-x-2"
             >
               <span className="text-lg">+</span>
               <span className="font-medium">New Project</span>

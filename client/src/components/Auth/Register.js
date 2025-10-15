@@ -47,25 +47,25 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-dark-900 via-primary-900 to-dark-900 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
         <div className="text-center">
           <h1 className="text-3xl font-bold text-white">ProjectHub</h1>
           <h2 className="mt-6 text-2xl font-semibold text-white">Create your account</h2>
-          <p className="mt-2 text-sm text-slate-300">
+          <p className="mt-2 text-sm text-dark-300">
             Or{' '}
-            <Link to="/login" className="font-medium text-purple-400 hover:text-purple-300 transition-colors">
+            <Link to="/login" className="font-medium text-accent-400 hover:text-accent-300 transition-colors">
               sign in to your existing account
             </Link>
           </p>
         </div>
 
-        <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 shadow-2xl">
+        <div className="bg-dark-800/50 backdrop-blur-sm rounded-2xl border border-dark-700/50 shadow-2xl">
           <div className="p-8">
             <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
+                  <label htmlFor="firstName" className="block text-sm font-medium text-dark-300">
                     First name
                   </label>
                   <div className="mt-1">
@@ -94,7 +94,7 @@ const Register = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">
+                  <label htmlFor="lastName" className="block text-sm font-medium text-dark-300">
                     Last name
                   </label>
                   <div className="mt-1">
@@ -124,7 +124,7 @@ const Register = () => {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                <label htmlFor="email" className="block text-sm font-medium text-dark-300">
                   Email address
                 </label>
                 <div className="mt-1">
@@ -149,7 +149,7 @@ const Register = () => {
               </div>
 
               <div>
-                <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+                <label htmlFor="password" className="block text-sm font-medium text-dark-300">
                   Password
                 </label>
                 <div className="mt-1 relative">
@@ -173,9 +173,9 @@ const Register = () => {
                     onClick={() => setShowPassword(!showPassword)}
                   >
                     {showPassword ? (
-                      <EyeSlashIcon className="h-5 w-5 text-gray-400" />
+                      <EyeSlashIcon className="h-5 w-5 text-dark-400" />
                     ) : (
-                      <EyeIcon className="h-5 w-5 text-gray-400" />
+                      <EyeIcon className="h-5 w-5 text-dark-400" />
                     )}
                   </button>
                   {errors.password && (
@@ -185,7 +185,7 @@ const Register = () => {
               </div>
 
               <div>
-                <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">
+                <label htmlFor="confirmPassword" className="block text-sm font-medium text-dark-300">
                   Confirm password
                 </label>
                 <div className="mt-1 relative">
@@ -207,9 +207,9 @@ const Register = () => {
                     onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                   >
                     {showConfirmPassword ? (
-                      <EyeSlashIcon className="h-5 w-5 text-gray-400" />
+                      <EyeSlashIcon className="h-5 w-5 text-dark-400" />
                     ) : (
-                      <EyeIcon className="h-5 w-5 text-gray-400" />
+                      <EyeIcon className="h-5 w-5 text-dark-400" />
                     )}
                   </button>
                   {errors.confirmPassword && (
@@ -219,7 +219,7 @@ const Register = () => {
               </div>
 
               <div>
-                <label htmlFor="role" className="block text-sm font-medium text-gray-700">
+                <label htmlFor="role" className="block text-sm font-medium text-dark-300">
                   Role
                 </label>
                 <div className="mt-1">
@@ -251,13 +251,13 @@ const Register = () => {
                     required: 'You must accept the terms and conditions',
                   })}
                 />
-                <label htmlFor="terms" className="ml-2 block text-sm text-gray-900">
+                <label htmlFor="terms" className="ml-2 block text-sm text-dark-300">
                   I agree to the{' '}
-                  <Link to="/terms" className="text-primary-600 hover:text-primary-500">
+                  <Link to="/terms" className="text-accent-400 hover:text-accent-300">
                     Terms of Service
                   </Link>{' '}
                   and{' '}
-                  <Link to="/privacy" className="text-primary-600 hover:text-primary-500">
+                  <Link to="/privacy" className="text-accent-400 hover:text-accent-300">
                     Privacy Policy
                   </Link>
                 </label>
@@ -287,10 +287,10 @@ const Register = () => {
             <div className="mt-6">
               <div className="relative">
                 <div className="absolute inset-0 flex items-center">
-                  <div className="w-full border-t border-gray-300" />
+                  <div className="w-full border-t border-dark-600" />
                 </div>
                 <div className="relative flex justify-center text-sm">
-                  <span className="px-2 bg-white text-gray-500">Or continue with</span>
+                  <span className="px-2 bg-dark-800 text-dark-400">Or continue with</span>
                 </div>
               </div>
 
