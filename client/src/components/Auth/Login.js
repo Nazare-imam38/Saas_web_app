@@ -38,24 +38,24 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-dark-900 via-primary-900 to-dark-900 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
         <div className="text-center">
           <h1 className="text-3xl font-bold text-white">ProjectHub</h1>
           <h2 className="mt-6 text-2xl font-semibold text-white">Sign in to your account</h2>
-          <p className="mt-2 text-sm text-slate-300">
+          <p className="mt-2 text-sm text-dark-300">
             Or{' '}
-            <Link to="/register" className="font-medium text-purple-400 hover:text-purple-300 transition-colors">
+            <Link to="/register" className="font-medium text-accent-400 hover:text-accent-300 transition-colors">
               create a new account
             </Link>
           </p>
         </div>
 
-        <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 shadow-2xl">
+        <div className="bg-dark-800/50 backdrop-blur-sm rounded-2xl border border-dark-700/50 shadow-2xl">
           <div className="p-8">
             <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-slate-300">
+                <label htmlFor="email" className="block text-sm font-medium text-dark-300">
                   Email address
                 </label>
                 <div className="mt-1">
@@ -63,7 +63,7 @@ const Login = () => {
                     id="email"
                     type="email"
                     autoComplete="email"
-                    className={`w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 ${errors.email ? 'border-red-500 focus:ring-red-500' : ''}`}
+                    className={`w-full px-4 py-3 bg-dark-700/50 border border-dark-600 rounded-xl text-white placeholder-dark-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 ${errors.email ? 'border-danger-500 focus:ring-danger-500' : ''}`}
                     placeholder="Enter your email"
                     {...register('email', {
                       required: 'Email is required',
@@ -74,13 +74,13 @@ const Login = () => {
                     })}
                   />
                   {errors.email && (
-                    <p className="mt-1 text-sm text-red-400">{errors.email.message}</p>
+                    <p className="mt-1 text-sm text-danger-400">{errors.email.message}</p>
                   )}
                 </div>
               </div>
 
               <div>
-                <label htmlFor="password" className="block text-sm font-medium text-slate-300">
+                <label htmlFor="password" className="block text-sm font-medium text-dark-300">
                   Password
                 </label>
                 <div className="mt-1 relative">
@@ -88,7 +88,7 @@ const Login = () => {
                     id="password"
                     type={showPassword ? 'text' : 'password'}
                     autoComplete="current-password"
-                    className={`w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 pr-12 ${errors.password ? 'border-red-500 focus:ring-red-500' : ''}`}
+                    className={`w-full px-4 py-3 bg-dark-700/50 border border-dark-600 rounded-xl text-white placeholder-dark-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 pr-12 ${errors.password ? 'border-danger-500 focus:ring-danger-500' : ''}`}
                     placeholder="Enter your password"
                     {...register('password', {
                       required: 'Password is required',
@@ -104,13 +104,13 @@ const Login = () => {
                     onClick={() => setShowPassword(!showPassword)}
                   >
                     {showPassword ? (
-                      <EyeSlashIcon className="h-5 w-5 text-slate-400 hover:text-white transition-colors" />
+                      <EyeSlashIcon className="h-5 w-5 text-dark-400 hover:text-white transition-colors" />
                     ) : (
-                      <EyeIcon className="h-5 w-5 text-slate-400 hover:text-white transition-colors" />
+                      <EyeIcon className="h-5 w-5 text-dark-400 hover:text-white transition-colors" />
                     )}
                   </button>
                   {errors.password && (
-                    <p className="mt-1 text-sm text-red-400">{errors.password.message}</p>
+                    <p className="mt-1 text-sm text-danger-400">{errors.password.message}</p>
                   )}
                 </div>
               </div>
@@ -121,15 +121,15 @@ const Login = () => {
                     id="remember-me"
                     name="remember-me"
                     type="checkbox"
-                    className="h-4 w-4 text-purple-600 focus:ring-purple-500 border-slate-600 bg-slate-700 rounded"
+                    className="h-4 w-4 text-primary-600 focus:ring-primary-500 border-dark-600 bg-dark-700 rounded"
                   />
-                  <label htmlFor="remember-me" className="ml-2 block text-sm text-slate-300">
+                  <label htmlFor="remember-me" className="ml-2 block text-sm text-dark-300">
                     Remember me
                   </label>
                 </div>
 
                 <div className="text-sm">
-                  <Link to="/forgot-password" className="font-medium text-purple-400 hover:text-purple-300 transition-colors">
+                  <Link to="/forgot-password" className="font-medium text-accent-400 hover:text-accent-300 transition-colors">
                     Forgot your password?
                   </Link>
                 </div>
@@ -139,7 +139,7 @@ const Login = () => {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full flex justify-center py-3 px-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-800 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg hover:shadow-xl"
+                  className="w-full flex justify-center py-3 px-4 bg-gradient-to-r from-primary-600 to-accent-600 text-white font-semibold rounded-xl hover:from-primary-700 hover:to-accent-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-dark-800 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
                   {isLoading ? (
                     <div className="flex items-center">
@@ -156,15 +156,15 @@ const Login = () => {
             <div className="mt-6">
               <div className="relative">
                 <div className="absolute inset-0 flex items-center">
-                  <div className="w-full border-t border-slate-600" />
+                  <div className="w-full border-t border-dark-600" />
                 </div>
                 <div className="relative flex justify-center text-sm">
-                  <span className="px-2 bg-slate-800 text-slate-400">Or continue with</span>
+                  <span className="px-2 bg-dark-800 text-dark-400">Or continue with</span>
                 </div>
               </div>
 
               <div className="mt-6 grid grid-cols-2 gap-3">
-                <button className="w-full inline-flex justify-center items-center px-4 py-3 border border-slate-600 rounded-xl text-sm font-medium text-slate-300 bg-slate-700/50 hover:bg-slate-600/50 hover:text-white transition-all duration-200">
+                <button className="w-full inline-flex justify-center items-center px-4 py-3 border border-dark-600 rounded-xl text-sm font-medium text-dark-300 bg-dark-700/50 hover:bg-dark-600/50 hover:text-white transition-all duration-200">
                   <svg className="w-5 h-5" viewBox="0 0 24 24">
                     <path
                       fill="currentColor"
@@ -186,7 +186,7 @@ const Login = () => {
                   <span className="ml-2">Google</span>
                 </button>
 
-                <button className="w-full inline-flex justify-center items-center px-4 py-3 border border-slate-600 rounded-xl text-sm font-medium text-slate-300 bg-slate-700/50 hover:bg-slate-600/50 hover:text-white transition-all duration-200">
+                <button className="w-full inline-flex justify-center items-center px-4 py-3 border border-dark-600 rounded-xl text-sm font-medium text-dark-300 bg-dark-700/50 hover:bg-dark-600/50 hover:text-white transition-all duration-200">
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
                   </svg>
@@ -198,13 +198,13 @@ const Login = () => {
         </div>
 
         <div className="text-center">
-          <p className="text-xs text-slate-400">
+          <p className="text-xs text-dark-400">
             By signing in, you agree to our{' '}
-            <Link to="/terms" className="text-purple-400 hover:text-purple-300 transition-colors">
+            <Link to="/terms" className="text-accent-400 hover:text-accent-300 transition-colors">
               Terms of Service
             </Link>{' '}
             and{' '}
-            <Link to="/privacy" className="text-purple-400 hover:text-purple-300 transition-colors">
+            <Link to="/privacy" className="text-accent-400 hover:text-accent-300 transition-colors">
               Privacy Policy
             </Link>
           </p>

@@ -111,15 +111,15 @@ const Dashboard = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-6">
+    <div className="min-h-screen bg-gradient-to-br from-dark-900 via-primary-900 to-dark-900 p-6">
       <div className="space-y-8">
         {/* Welcome Section */}
-        <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-2xl shadow-2xl border border-purple-500/20">
+        <div className="bg-gradient-to-r from-primary-600 via-accent-600 to-primary-700 rounded-2xl shadow-2xl border border-primary-500/20">
           <div className="px-8 py-10">
             <h1 className="text-3xl font-bold text-white mb-2">
               Welcome back, {user?.firstName}! 👋
             </h1>
-            <p className="text-blue-100 text-lg">
+            <p className="text-primary-100 text-lg">
               Here's what's happening with your projects today.
             </p>
           </div>
@@ -128,16 +128,16 @@ const Dashboard = () => {
         {/* Stats Grid */}
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((stat) => (
-            <div key={stat.name} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+            <div key={stat.name} className="bg-dark-800/50 backdrop-blur-sm rounded-2xl border border-dark-700/50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
               <div className="p-6">
                 <div className="flex items-center">
                   <div className="flex-shrink-0">
-                    <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl">
+                    <div className="p-3 bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl">
                       <stat.icon className="h-6 w-6 text-white" />
                     </div>
                   </div>
                   <div className="ml-4 flex-1">
-                    <p className="text-sm font-medium text-slate-300">{stat.name}</p>
+                    <p className="text-sm font-medium text-dark-300">{stat.name}</p>
                     <p className="text-2xl font-bold text-white">{stat.value}</p>
                   </div>
                 </div>
@@ -151,7 +151,7 @@ const Dashboard = () => {
                   >
                     {stat.change}
                   </span>
-                  <span className="ml-2 text-sm text-slate-400">from last month</span>
+                  <span className="ml-2 text-sm text-dark-400">from last month</span>
                 </div>
               </div>
             </div>
